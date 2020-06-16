@@ -30,8 +30,7 @@ const oldCode = `
     </SignonRq>
 </ACORD>
 `;
-const newCode = `
-<ACORD>
+const newCode = `<ACORD>
     <SignonRq>
         <SignonPswd>
             <CustId>
@@ -57,8 +56,7 @@ const newCode = `
             <Version>V1.00</Version>
         </ProxyClient>
     </SignonRq>
-</ACORD>
-`;
+</ACORD>`;
 
 class Diff extends PureComponent {
   render = () => {
@@ -69,6 +67,7 @@ class Diff extends PureComponent {
         compareMethod={DiffMethod.LINES}
         splitView={false}
         hideLineNumbers={true}
+        showDiffOnly={false}
       />
     );
   };
